@@ -1,0 +1,685 @@
+ <!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>ResearchBuzz Search Gizmos: Carl's Name Net</title>
+		<style type="text/css">
+			html, #page { padding:0; margin:0;}
+			body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;} 
+			h1, h2, h3, h4, h5, h6 {color:darkblue;}
+			#page { background:#fff;}
+			#header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+						
+			/* Logo */
+			#logo { padding:0; width:auto; float:left;}
+			#logo h1 a, h1 a:hover { color:darkblue; text-decoration:none;}
+			#logo h1 span { color:#24592c;}
+
+			/* Header */
+			#header { background:#fff; }
+			#header-inner { margin:0 auto; padding:0; width:970px;}
+			
+			/* Feature */
+			.feature { background:blue;padding:18px;}
+			.feature-inner { margin:auto;width:970px; }
+			.feature-inner h1 {color:#E9E9FC;font-size:32px;}
+			
+			/* Menu */
+			#top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+			#top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+			#top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+			#top-nav ul li a { display:block; margin:0; padding:8px 20px; color:blue; text-decoration:none;}
+			#top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+			
+			/* Content */
+			#content-inner { margin:0 auto; padding:10px 0; width:970px;background:#fff;}
+			#content #contentbar { margin:0; padding:0; float:right; width:760px;}
+			#content #contentbar .article {  font-size: 1.25em; color: black; margin:0 0 24px; padding:0 20px 0 15px; }
+			#content #sidebar { background-color:#ECFFDC; padding:0; float:left; width:200px;}
+			#content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+			#content #sidebar .widget h3 a { text-decoration:none;}
+			#content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+			#content #sidebar .widget ul li { margin:0;}
+			#content #sidebar .widget ul li { padding:4px 0; width:185px;}
+			#content #sidebar .widget ul li a {font-size: 1.25em; color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+			#content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+			
+			/* Footerblurb */
+			#footerblurb { background:#d3d3f9;color:blue;}
+			#footerblurb-inner { margin:0 auto; width:922px; padding:24px;}
+			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+			
+			/* Footer */
+			#footer { background:#fff;}
+			#footer-inner { margin:auto; text-align:center; padding:12px; width:922px;}
+			#footer a {color:blue;text-decoration:none;}
+			
+			/* Clear both sides to assist with div alignment  */
+			.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+		</style>
+		
+
+	</head>
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="header-inner">	
+					<div id="logo">
+						<h1><a href="#">ResearchBuzz<span>Search Gizmos</span></a></h1>
+					</div>
+					<div id="top-nav">
+						<ul>
+						<li><a href="https://github.com/ResearchBuzz">ResearchBuzz GitHub Home</a></li>
+						<li><a href="https://www.researchbuzz.me">ResearchBuzz Main Site</a></li>
+						<li><a href="https://www.rbfirehose.com">ResearchBuzz Firehose</a></li>
+						</ul>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</header>
+			<div class="feature">
+				<div class="feature-inner">
+				<h1>Carl's Name Net </h1>
+				</div>
+			</div>
+		
+	
+			<div id="content">
+				<div id="content-inner">
+				
+					<main id="contentbar">
+						<div class="article">
+							
+<h3>Carl is a longtime Patreon, and I really appreciate him!</h3>
+
+<h4>Recently we've been trading emails about doing name-based searches. I was thinking about how he could be get some name variation searching done when I wonderered if this was a job for JavaScript. And it apparently is!<h4>
+
+<h4>Carl's Name Net takes a name and optional keywords, generates a set of name variants (for "John Paul Smith" you'd get John Smith, Smith John Paul, JP Smith, etc) and builds search URLs for Google, Google Books, Google Scholar, and Internet Archive. For the Google searches, it creates two sets of searches: one for common name variants, and one for uncommon. (If you don't specify a middle name, you'll only get one set of name searches for each resource.) For the Internet Archive, every name gets its own search URL.</h4>
+
+<h5>The keyword option is for filtering out irrelevant results. If you find you're getting too much junk in your results, add general keywords here. Keep them general: if the person you're searching lived in Paris, consider <i>France</i> as a potential keyword. If they taught at Notre Dame, consider adding <i>professor</i> before <i>Notre Dame.</i></h5>
+
+
+
+    <text size="large"><label><b>First Name:</b></label></text></i>
+  <input type="text" class="firstname" value="Charles"><br><br>
+
+<i><text size="large"><label><b>Middle Name:</b></label></text></i>
+  <input type="text" class="middlename"><br><br>
+
+ <text size="large"><label><b>Last Name:</b></label></text></i>
+  <input type="text" class="lastname" value="Reilly"><br><br>
+
+<text size="large"><label><b>Additional Query Terms:</b></label></text></i>
+<input type="text" class="moreterms"> <br>
+<i>Anything you add here will be added to the end of the name query, hopefully to help filter out useless results.<br> Don't get too specific; if you're looking for physicists, add <b>physics</b>. If you're looking for someone who lived in Berlin their whole life, add <b>Germany</b>.</i><br><br>
+  
+
+<button onclick="namenet()">Generate Name Variants</button><br><br>
+   
+<div id="Google">
+</div>
+
+<div id="GoogleScholar">
+</div>
+
+<div id="GoogleBooks">
+</div>
+
+<div id="InternetArchive">
+</div>
+
+<div id="results">
+</div>
+
+
+					</main>
+					
+						<nav id="sidebar">
+						<div class="widget">
+							<h3>Gizmo Categories</h3>
+
+							<ul>
+							<li><a href="https://researchbuzz.github.io/Google.html">Google Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Twitter.html">Twitter Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/News.html">News Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Blog.html">Blog Search Tools</a></li>
+							<li><a href="https://researchbuzz.github.io/Name.html">Name Search Tools</a></li>
+<li><a href="https://researchbuzz.github.io/OSINT.html">Search with OSINT Data</a></li>
+<li><a href="https://researchbuzz.github.io/notGithub.html">Random Gizmos Not on GitHub</a></li>
+
+
+							</ul>
+
+<br><br><a href="https://researchbuzz.github.io/">RB Search Gizmos Home</a><br><br>
+						</div>
+					</nav>
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+		
+			<div id="footerblurb">
+				<div id="footerblurb-inner">
+				
+					<div class="column">
+						<h2><span>What Is This?</span></h2>
+						<p>The RB Gizmos are a collection of search tools made with JavaScript and HTML.</p>
+					</div>	
+					<div class="column">
+						<h2><span>Why Is This?</span></h2>
+						<p>Because I've been writing about searching and search engines since 1996 and I'm obsessed with them.</p>
+					</div>
+					<div class="column">
+						<h2> </h2>
+						<p><script> </script></p>
+					</div>	
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+			<footer id="footer">
+				<div id="footer-inner">
+					
+					<div class="clr"></div>
+				</div>
+			</footer>
+
+
+
+		</div>
+
+
+
+
+     <script>
+function namenet() {
+  let namevars = [];
+  
+  var one = document.querySelector('.firstname').value;
+ 
+  if (one) {
+  } else {
+    alert('Both first and last names are required to use this tool.');
+    return false;
+  }
+
+  var two = document.querySelector('.middlename').value;
+  var three = document.querySelector('.lastname').value;
+ 
+
+  if (three) {
+  } else {
+    alert('Both first and last names are required to use this tool.');
+    return false;
+  }
+
+  var four = one.slice(0, 1);
+  if (two) {
+    var five = two.slice(0, 1);
+  } else {
+    var two = 'nada';
+    var GoogleBooks2 = 'None';
+    console.log(two)
+  }
+
+  var moreterms = document.querySelector('.moreterms').value;
+  moreterms = encodeURI(moreterms)
+
+  if (two != 'nada') {
+    var n1 = '"' +one + ' ' + two + ' ' + three+'"' 
+    namevars.push(n1);
+    var n2 = '"' +one + ' ' + five + ' ' + three+'"';
+    namevars.push(n2);
+    var n3 = '"' +one + ' ' + three+'"' ;
+    namevars.push(n3);
+    var n4 = '"' +four + five + ' ' + three+ '"';
+    namevars.push(n4);
+    var n5 = '"' + four + ' ' + two + ' ' + three + '"';
+    namevars.push(n5);
+    var n6 = '"' +three + ' ' + four + five+ '"';
+    namevars.push(n6);
+    var n7 = '"' +three + ' ' + one+ '"';
+    namevars.push(n7);
+    var n8 = '"' +three + ' ' + one + ' ' + five+ '"';
+    namevars.push(n8);
+    var n9 = '"' +three + ' ' + one + ' ' + two+ '"';
+    namevars.push(n9);
+    var n10 = '"' +three + ' ' + four+ '"';
+    namevars.push(n10);
+    console.log(namevars);
+    let dedupevars = [...new Set(namevars)];
+     //console.log(dedupevars);
+
+    let NameSetOne = dedupevars.slice(0, 4);
+    let NameSetTwo = dedupevars.slice(4);
+    //console.log("NameSetOne",NameSetOne)
+    //console.log("NameSet2",NameSetTwo)
+
+// Google Array One
+
+var Googleq = "("+n1+" | "+n2+" | "+n3+" | "+n4+")"
+
+Googleq = encodeURI(Googleq)
+
+var GoogleqURL = "https://www.google.com/search?tbs=li:1&q="+Googleq+"&"
+
+if (moreterms) {
+GoogleqURL = "https://www.google.com/search?tbs=li:1&q="+Googleq+"+"+moreterms
+}
+
+console.log(GoogleqURL)
+    
+// Google Array Two 
+
+var loopstart = 0
+var looplength = NameSetTwo.length
+var qstring = "( "
+
+while (loopstart<looplength) {
+
+qchunk = NameSetTwo[loopstart]+" | "
+qstring = qstring+qchunk
+loopstart++
+
+}
+
+qstring = qstring.slice(0,-3)
+qstring = qstring+")"
+qstring = encodeURI(qstring)
+console.log("qstring",qstring)
+
+var GoogleqURL2 = "https://www.google.com/search?tbs=li:1&q="+qstring+"&"
+
+if (moreterms) {
+
+GoogleqURL2 = "https://www.google.com/search?tbs=li:1&q="+qstring+"+"+moreterms
+
+}
+
+console.log("Google Url 2",GoogleqURL2)
+
+// Making the Google URLs look nice 
+
+GoogleqURL = "<a href=\""+GoogleqURL+"\" target=\"_blank\">Google search for "+n1+": Common Name Variants</a>"
+
+GoogleqURL2 = "<a href=\""+GoogleqURL2+"\" target=\"_blank\">Google search for "+n1+": Uncommon Name Variants</a>"
+
+var GoogleBlock = "<b>Google Search URLs</b><br><br>"+GoogleqURL+"<br><br>"+GoogleqURL2+"<br><br>"
+
+var Googlediv = document.getElementById("Google")
+
+Googlediv.innerHTML = GoogleBlock
+
+// Google Books Array One
+
+var Googlebq = "("+n1+" | "+n2+" | "+n3+" | "+n4+")"
+
+Googlebq = encodeURI(Googlebq)
+
+var GooglebqURL = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+Googlebq+"&"
+
+if (moreterms) {
+
+GooglebqURL = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+Googlebq+"+"+moreterms
+
+}
+
+
+console.log("Books",GooglebqURL)
+
+// Google Books Array TWo 
+
+var loopstart = 0
+var qstringb = "( "
+
+while (loopstart<looplength) {
+
+qchunkb = NameSetTwo[loopstart]+" | "
+qstringb = qstringb+qchunkb
+loopstart++
+
+}
+
+qstringb = qstringb.slice(0,-3)
+qstringb = qstringb+")"
+qstrinbg = encodeURI(qstringb)
+console.log("qstringb",qstringb)
+
+var GooglebqURL2 = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+qstrinbg+"&"
+
+
+if (moreterms) {
+
+GooglebqURL2 = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+qstrinbg+"+"+moreterms
+
+}
+
+console.log("Books Two",GooglebqURL2)
+
+
+// Making the Google Books URLs look nice 
+
+GooglebqURL = "<a href=\""+GooglebqURL+"\" target=\"_blank\">Google Books search for "+n1+": Common Name Variants</a>"
+
+GooglebqURL2 = "<a href=\""+GooglebqURL2+"\" target=\"_blank\">Google Books search for "+n1+": Uncommon Name Variants</a>"
+
+var GoogleBooksBlock = "<b>Google Books Search URLs</b><br><br>"+GooglebqURL+"<br><br>"+GooglebqURL2+"<br><br>"
+
+var GoogleBooksdiv = document.getElementById("GoogleBooks")
+
+GoogleBooksdiv.innerHTML = GoogleBooksBlock
+
+// Google Scholar Array One
+
+var Googlesq = "("+n1+" | "+n2+" | "+n3+" | "+n4+")"
+
+Googlesq = encodeURI(Googlesq)
+
+var GooglesqURL = "https://scholar.google.com/scholar?as_sdt=7,34&q="+Googlesq+"&"
+
+if (moreterms) {
+
+GooglesqURL = "https://scholar.google.com/scholar?as_sdt=7,34&q="+Googlesq+"+"+moreterms
+
+}
+
+
+console.log("GoogleScholar",GooglesqURL)
+
+// Google Scholar Array TWo 
+
+var loopstart = 0
+var qstrings = "( "
+
+while (loopstart<looplength) {
+
+qchunks = NameSetTwo[loopstart]+" | "
+qstrings = qstrings+qchunks
+loopstart++
+
+}
+
+qstrings = qstrings.slice(0,-3)
+qstrings = qstrings+")"
+qstrings = encodeURI(qstrings)
+//qchunks = encodeURI(qchunks)
+console.log("qstrings",qstrings)
+
+var GooglesqURL2 = "https://scholar.google.com/scholar?as_sdt=7,34&q="+qstrings+"&"
+
+if (moreterms) {
+
+GooglesqURL2 = "https://scholar.google.com/scholar?as_sdt=7,34&q="+qstrings+"+"+moreterms
+
+}
+
+console.log("Scholar Two",GooglesqURL2)
+
+// Making the Google Scholar URLs look nice 
+
+GooglesqURL = "<a href=\""+GooglesqURL+"\" target=\"_blank\">Google Scholar search for "+n1+": Common Name Variants</a>"
+
+GooglesqURL2 = "<a href=\""+GooglesqURL2+"\" target=\"_blank\">Google Scholar search for "+n1+": Uncommon Name Variants</a>"
+
+var GoogleScholarBlock = "<b>Google Scholar Search URLs</b><br><br>"+GooglesqURL+"<br><br>"+GooglesqURL2+"<br><br>"
+
+var GoogleScholardiv = document.getElementById("GoogleScholar")
+
+GoogleScholardiv.innerHTML = GoogleScholarBlock
+
+
+
+// Internet Archive 
+
+let IASearches=[]
+let IANames =[]
+let IADChunks =[]
+
+loopstart = 0
+IAloopend = dedupevars.length
+
+while (loopstart<IAloopend) {
+
+var IAChunk = dedupevars[loopstart]
+IANames.push(IAChunk)
+var IADChunk = IAChunk
+IADChunks.push(IADChunk)
+var IAChunk = encodeURI(IAChunk)
+var IASearch = "https://archive.org/search.php?sin=TXT&query="+IAChunk
+if (moreterms) {
+
+IASearch = "https://archive.org/search.php?sin=TXT&query="+IAChunk+"+"+moreterms
+
+}
+IASearches.push(IASearch)
+console.log(IASearch)
+loopstart++
+
+// Making Internet Archive URLs look good
+
+loopstart = 0 
+var IAloop = IANames.length 
+let IAURLs = []
+
+while (loopstart<IAloop) 
+{
+var IANamesURL = "<a href=\""+IASearches[loopstart]+"\" target=\"_blank\">Internet Archive search for "+IADChunks[loopstart]+"</a>"
+IAURLs.push(IANamesURL)
+console.log(IANamesURL)
+loopstart++
+}
+
+loopstart = 0 
+var IAUloop = IAURLs.length
+var IAtext = "<b>Individual name searches for Internet Archive:</b><br><i>These can load a litte slowly so give it a moment.</i><br><br>"
+
+while (loopstart<IAUloop) 
+{
+
+var IAchunk = IAURLs[loopstart]+"<br><br>"
+IAtext = IAtext+IAchunk 
+loopstart++
+}
+
+var InternetArchivediv = document.getElementById("InternetArchive")
+
+InternetArchivediv.innerHTML = IAtext
+
+
+
+}
+
+
+
+// No Middle Name
+  } else {
+    nv1 = '"' +one + ' ' + three+ '"';
+    namevars.push(nv1);
+    nv2 = '"' + four + ' ' + three+ '"';
+    namevars.push(nv2);
+    nv3 = '"' +three + ' ' + one+ '"';
+    namevars.push(nv3);
+    nv4 = '"' +three + ' ' + four+ '"';
+    namevars.push(nv4);
+    console.log(namevars);
+    let dedupevars = [...new Set(namevars)];
+    console.log(namevars);
+    console.log(dedupevars);
+
+    let NameSetOne = [];
+    NameSetOne = dedupevars;
+    console.log('NameSetOne', NameSetOne);
+
+    var loopend = dedupevars.length;
+    var loopstart = 0
+
+// Google
+
+var Googleq = "("+nv1+" | "+nv2+" | "+nv3+" | "+nv4+")"
+
+Googleq = encodeURI(Googleq)
+
+var GoogleqURL = "https://www.google.com/search?tbs=li:1&q="+Googleq+"&"
+
+if (moreterms) {
+GoogleqURL = "https://www.google.com/search?tbs=li:1&q="+Googleq+"+"+moreterms
+
+}
+
+console.log(GoogleqURL)
+
+// Making the Google URLs look nice 
+
+GoogleqURL = "<a href=\""+GoogleqURL+"\" target=\"_blank\">Google search for "+nv1+": Common Name Variants</a>"
+
+var GoogleBlock = "<b>Google Search URLs</b><br><br>"+GoogleqURL+"<br><br>"
+
+var Googlediv = document.getElementById("Google")
+
+Googlediv.innerHTML = GoogleBlock
+
+
+// Google Books
+
+var Googlebq = "("+nv1+" | "+nv2+" | "+nv3+" | "+nv4+")"
+
+Googlebq = encodeURI(Googlebq)
+
+var GooglebqURL = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+Googlebq+"&"
+
+if (moreterms) {
+
+GooglebqURL = "https://www.google.com/search?tbs=li:1&tbm=bks&q="+Googlebq+"+"+moreterms
+
+}
+
+
+console.log("Books",GooglebqURL)
+
+// Making the Google Books URLs look nice 
+
+GooglebqURL = "<a href=\""+GooglebqURL+"\" target=\"_blank\">Google Books search for "+nv1+": Common Name Variants</a>"
+
+var GoogleBooksBlock = "<b>Google Books Search URLs</b><br><br>"+GooglebqURL+"<br><br>"
+
+
+var GoogleBooksdiv = document.getElementById("GoogleBooks")
+
+GoogleBooksdiv.innerHTML = GoogleBooksBlock
+
+// Google Scholar
+
+var Googlesq = "("+nv1+" | "+nv2+" | "+nv3+" | "+nv4+")"
+
+Googlesq = encodeURI(Googlesq)
+
+var GooglesqURL = "https://scholar.google.com/scholar?as_sdt=7,34&q="+Googlesq+"&"
+
+if (moreterms) {
+
+GooglesqURL = "https://scholar.google.com/scholar?as_sdt=7,34&q="+Googlesq+"+"+moreterms
+
+}
+
+console.log("GoogleScholar",GooglesqURL)
+
+
+// Making the Google Scholar URL look nice 
+
+GooglesqURL = "<a href=\""+GooglesqURL+"\" target=\"_blank\">Google Scholar search for "+nv1+": Common Name Variants</a>"
+
+var GoogleScholarBlock = "<b>Google Scholar Search URLs</b><br><br>"+GooglesqURL+"<br><br>"
+
+var GoogleScholardiv = document.getElementById("GoogleScholar")
+
+GoogleScholardiv.innerHTML = GoogleScholarBlock
+
+
+// Internet Archive 
+
+let IASearches=[]
+let IANames =[]
+
+loopstart = 0
+IAloopend = NameSetOne.length
+
+while (loopstart<IAloopend) {
+
+var IAChunk = NameSetOne[loopstart]
+IANames.push(IAChunk)
+var IAChunk = encodeURI(IAChunk)
+var IASearch = "https://archive.org/search.php?sin=TXT&query="+IAChunk
+if (moreterms) {
+
+IASearch = "https://archive.org/search.php?sin=TXT&query="+IAChunk+"+"+moreterms
+
+}
+IASearches.push(IASearch)
+console.log(IASearch)
+loopstart++
+
+
+}
+
+// Making Internet Archive URLs look good
+
+loopstart = 0 
+var IAloop = IASearches.length 
+let IAURLs = []
+
+while (loopstart<IAloop) 
+{
+var IANamesURL = "<a href=\""+IASearches[loopstart]+"\" target=\"_blank\">Internet Archive search for "+namevars[loopstart]+"</a>"
+IAURLs.push(IANamesURL)
+console.log(IANamesURL)
+loopstart++
+}
+
+loopstart = 0 
+var IAUloop = IAURLs.length
+var IAtext = "<b>Individual name searches for Internet Archive:</b><br><i>These can load a litte slowly so give it a moment.</i><br><br>"
+
+while (loopstart<IAUloop) 
+{
+
+var IAchunk = IAURLs[loopstart]+"<br><br>"
+IAtext = IAtext+IAchunk 
+loopstart++
+}
+
+var InternetArchivediv = document.getElementById("InternetArchive")
+
+InternetArchivediv.innerHTML = IAtext
+
+
+
+}
+
+let dedupevars2 = [...new Set(namevars)];
+var lastloop = dedupevars2.length
+
+var Bdiv = document.getElementById("results")
+var listing = "<b>Name Variants</b><br><br>" 
+
+loopstart=0
+
+while (loopstart<lastloop){
+
+namevariant = dedupevars2[loopstart]+"<br><br>"
+
+listing = listing+namevariant
+
+
+loopstart++
+
+}
+
+Bdiv.innerHTML = listing
+
+
+}
+
+</script>
+</body>
+</html>
